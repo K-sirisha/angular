@@ -1,0 +1,12 @@
+<p>
+  first-component
+</p>
+<div>
+  <input type = "text" name = "itemName" [(ngModel)] = "itemName">
+    <button style="color:blue" [disabled] = "!isavailable" 
+    (click) = "onClick()">Add Item</button>
+    
+    <div *ngFor = "let item of itemNames; let i=index" >
+    <p>{{item}}&nbsp;&nbsp;<button (click) = "onClickRemove(i)" style="color:red" >Remove</button></p>
+  </div>
+</div>
